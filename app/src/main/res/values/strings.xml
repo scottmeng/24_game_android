@@ -8,5 +8,9 @@
     <string name="mengk_txv_second">4</string>
     <string name="mengk_txv_third">8</string>
     <string name="mengk_txv_fourth">5</string>
+    <string name="mengk_plus_sign">+</string>
+    <string name="mengk_minus_sign">-</string>
+    <string name="mengk_multiply_sign">&#xd7;</string>
+    <string name="mengk_divide_sign">&#xf7;</string>
 
 </resources>
