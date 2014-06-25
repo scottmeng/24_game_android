@@ -39,11 +39,11 @@
         android:orientation="horizontal"
         android:paddingBottom="60dp">
 
-        <TextView
+        <TextView android:id="@+id/txv_plus"
             style="@style/OperatorStyle"
             android:text="@string/mengk_plus_sign"/>
 
-        <TextView
+        <TextView android:id="@+id/txv_minus"
             style="@style/OperatorStyle"
             android:text="@string/mengk_minus_sign"/>
 
@@ -56,11 +56,11 @@
         android:orientation="horizontal"
         android:paddingTop="60dp">
 
-        <TextView
+        <TextView android:id="@+id/txv_multiply"
             style="@style/OperatorStyle"
             android:text="@string/mengk_multiply_sign"/>
 
-        <TextView
+        <TextView android:id="@+id/txv_divide"
             style="@style/OperatorStyle"
             android:text="@string/mengk_divide_sign"/>
 
