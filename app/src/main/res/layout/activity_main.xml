@@ -16,26 +16,21 @@
 
         <TextView android:id="@+id/txv_first"
             style="@style/CardStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/mengk_txv_first"/>
 
         <TextView android:id="@+id/txv_second"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/CardStyle"
             android:layout_weight="1"
             android:text="@string/mengk_txv_second"/>
 
         <TextView android:id="@+id/txv_third"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/CardStyle"
             android:layout_weight="1"
             android:text="@string/mengk_txv_third"/>
 
         <TextView android:id="@+id/txv_fourth"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/CardStyle"
             android:layout_weight="1"
             android:text="@string/mengk_txv_fourth"/>
 
