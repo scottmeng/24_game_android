@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Play24</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="mengk_txv_first">12</string>
+    <string name="mengk_txv_second">4</string>
+    <string name="mengk_txv_third">8</string>
+    <string name="mengk_txv_fourth">5</string>
+
+</resources>

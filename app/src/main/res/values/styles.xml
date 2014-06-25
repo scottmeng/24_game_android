@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="CardStyle">
+        <item name="android:textSize">24dp</item>
+        <item name="android:background"></item>
+    </style>
+
+</resources>
