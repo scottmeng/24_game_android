@@ -1,69 +1,89 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout android:id="@+id/lil_card_deck"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_height="60dp"
+        android:padding="8dp"
         android:orientation="horizontal">
 
-        <TextView android:id="@+id/txv_first"
-            style="@style/CardStyle"
-            android:text="@string/mengk_txv_first"/>
-
-        <TextView android:id="@+id/txv_second"
-            style="@style/CardStyle"
-            android:text="@string/mengk_txv_second"/>
-
-        <TextView android:id="@+id/txv_third"
-            style="@style/CardStyle"
-            android:text="@string/mengk_txv_third"/>
-
-        <TextView android:id="@+id/txv_fourth"
-            style="@style/CardStyle"
-            android:text="@string/mengk_txv_fourth"/>
-
+        <TextView
+            android:id="@+id/txt_equation"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/lil_card_deck"
-        android:orientation="horizontal"
-        android:paddingBottom="60dp">
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin">
 
-        <TextView android:id="@+id/txv_plus"
-            style="@style/OperatorStyle"
-            android:text="@string/mengk_plus_sign"/>
+        <LinearLayout android:id="@+id/lil_card_deck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
 
-        <TextView android:id="@+id/txv_minus"
-            style="@style/OperatorStyle"
-            android:text="@string/mengk_minus_sign"/>
+            <TextView android:id="@+id/txv_first"
+                style="@style/CardStyle"
+                android:text="@string/mengk_txv_first"/>
 
-    </LinearLayout>
+            <TextView android:id="@+id/txv_second"
+                style="@style/CardStyle"
+                android:text="@string/mengk_txv_second"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/lil_card_deck"
-        android:orientation="horizontal"
-        android:paddingTop="60dp">
+            <TextView android:id="@+id/txv_third"
+                style="@style/CardStyle"
+                android:text="@string/mengk_txv_third"/>
 
-        <TextView android:id="@+id/txv_multiply"
-            style="@style/OperatorStyle"
-            android:text="@string/mengk_multiply_sign"/>
+            <TextView android:id="@+id/txv_fourth"
+                style="@style/CardStyle"
+                android:text="@string/mengk_txv_fourth"/>
 
-        <TextView android:id="@+id/txv_divide"
-            style="@style/OperatorStyle"
-            android:text="@string/mengk_divide_sign"/>
+        </LinearLayout>
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/lil_card_deck"
+            android:orientation="horizontal"
+            android:paddingBottom="60dp">
 
-</RelativeLayout>
+            <TextView android:id="@+id/txv_plus"
+                style="@style/OperatorStyle"
+                android:text="@string/mengk_plus_sign"/>
+
+            <TextView android:id="@+id/txv_minus"
+                style="@style/OperatorStyle"
+                android:text="@string/mengk_minus_sign"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lil_card_deck"
+            android:orientation="horizontal"
+            android:paddingTop="60dp">
+
+            <TextView android:id="@+id/txv_multiply"
+                style="@style/OperatorStyle"
+                android:text="@string/mengk_multiply_sign"/>
+
+            <TextView android:id="@+id/txv_divide"
+                style="@style/OperatorStyle"
+                android:text="@string/mengk_divide_sign"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

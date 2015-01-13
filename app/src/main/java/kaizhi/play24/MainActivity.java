@@ -1,6 +1,7 @@
 package kaizhi.play24;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.DragEvent;
@@ -9,9 +10,17 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import java.util.Stack;
+
+import kaizhi.play24.helper.Consts;
 
 
 public class MainActivity extends Activity implements View.OnTouchListener, View.OnDragListener {
+
+    private TextView mTxtEquestion;
+    private Stack<Integer> mEquationElements = new Stack<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,8 +64,14 @@ public class MainActivity extends Activity implements View.OnTouchListener, View
         Log.i("test", "on drag action: " + dragEvent);
         switch (dragEvent) {
             case DragEvent.ACTION_DRAG_ENTERED:
+                // change background code when entered
+                // make selection
+                v.setBackgroundColor(Color.LTGRAY);
                 break;
             case DragEvent.ACTION_DRAG_EXITED:
+                // change background color back when exiting
+                // maintain selection
+                v.setBackgroundColor(Color.GREEN);
                 break;
             case DragEvent.ACTION_DROP:
                 break;
@@ -96,5 +111,44 @@ public class MainActivity extends Activity implements View.OnTouchListener, View
                 return false;
         }
         return true;
+    }
+
+    private void addEquationElements(int element) {
+        mEquationElements.push(element);
+        updateEquestion();
+    }
+
+    private void removeEquationElements() {
+        mEquationElements.pop();
+        updateEquestion();
+    }
+
+    private void updateEquestion() {
+        String equation = "";
+
+        for (Integer element : mEquationElements) {
+            if (Consts.isElementOperator(element)) {
+                equation = equation.concat(getElementDisplay(element));
+            } else {
+                equation = equation.concat(String.valueOf(element));
+            }
+        }
+
+        mTxtEquestion.setText(equation);
+    }
+
+    private String getElementDisplay(int element) {
+        switch (element) {
+            case Consts.PLUS:
+                return getString(R.string.mengk_plus_sign);
+            case Consts.MINUS:
+                return getString(R.string.mengk_minus_sign);
+            case Consts.MULTIPLY:
+                return getString(R.string.mengk_multiply_sign);
+            case Consts.DIVIDE:
+                return getString(R.string.mengk_divide_sign);
+        }
+
+        return "";
     }
 }
